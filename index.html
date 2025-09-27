@@ -5,37 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Verisyn - Protect Digital Content</title>
   <link rel="stylesheet" href="css/landing_page.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">Verisyn</div>
-    <div class="nav-buttons">
-      <a href="login.html" class="btn-primary">Login</a>
-      <a href="signup.html" class="btn-primary">Sign Up</a>
 
+  <!-- ===== Header / Navbar ===== -->
+  <div class="header">
+    <h1>Verisyn</h1>
+    <div class="auth-buttons">
+      <a href="login.html">Login</a>
+      <a href="signup.html">Sign Up</a>
     </div>
-  </header>
+  </div>
 
-  <main class="main-content">
-    <h1><span>Verisyn</span> — Protect & Verify Your<br>Digital Content</h1>
-    <p>Two powerful tools — <strong>CrypTure</strong> & <strong>Deepfake Shield</strong> — for image & video authenticity, privacy and integrity.</p>
+  <!-- ===== Hero Section ===== -->
+  <section class="hero">
+    <h2><span>Verisyn</span> — Protect & Verify<br>Your Digital Content</h2>
+    <p>
+      Two powerful tools — <strong>CrypTure</strong> & <strong>Deepfake Shield</strong> — for image & video authenticity, privacy and integrity.
+    </p>
+  </section>
 
+  <!-- ===== Feature Cards ===== -->
+  <section class="feature-section">
 
-    <div class="tool-cards">
-      <div class="card cryp">
-        <h3>CrypTure</h3>
-        <p>Encrypt, watermark, and authenticate your images with privacy-first controls.</p>
-        <a href="upload.html" class="card-btn">Go to CrypTure →</a>
-      </div>
-      <div class="card deepfake">
-        <h3>Deepfake Shield</h3>
-        <p>Detect manipulations and verify video integrity with advanced AI checks.</p>
-        <a href="home.html" class="card-btn">Go to Deepfake Shield →</a>
-      </div>
+    <div class="feature-card green">
+      <h3>CrypTure</h3>
+      <p>Encrypt, watermark, and authenticate your images with privacy-first controls.</p>
+      <a href="crypture.html">Go to CrypTure →</a>
     </div>
-  </main>
-  
 
-  <script src="js/landing_page.js"></script>
+    <div class="feature-card red">
+      <h3>Deepfake Shield</h3>
+      <p>Detect manipulations and verify video integrity with advanced AI checks.</p>
+      <a href="home.html">Go to Deepfake Shield →</a>
+    </div>
+
+  </section>
+
+  <script src = "/js/landing_page.js"></script>
 </body>
 </html>
