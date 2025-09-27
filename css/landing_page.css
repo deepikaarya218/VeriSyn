@@ -1,3 +1,4 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +18,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -25,13 +27,10 @@ body {
   color: #fff;
 }
 
-.nav-buttons button {
-  margin-left: 10px;
-  padding: 10px 20px;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  border: none;
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .btn-primary {
@@ -43,7 +42,6 @@ body {
   text-decoration: none;
   display: inline-block;
 }
-
 
 .btn-outline {
   background-color: transparent;
@@ -61,6 +59,7 @@ body {
 .main-content {
   text-align: center;
   margin-top: 60px;
+  padding: 0 10px;
 }
 
 .main-content h1 {
@@ -97,7 +96,7 @@ body {
   padding: 25px;
   border-radius: 10px;
   color: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .cryp {
@@ -134,3 +133,54 @@ body {
   background: #ddd;
 }
 
+/* 🔁 Media Queries */
+@media screen and (max-width: 768px) {
+  .main-content h1 {
+    font-size: 2rem;
+  }
+
+  .main-content p {
+    font-size: 1rem;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tool-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .main-content p {
+    font-size: 0.95rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

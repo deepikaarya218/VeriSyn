@@ -17,6 +17,7 @@ body {
   align-items: center;
   padding: 15px 30px;
   border-bottom: 1px solid #30363d;
+  flex-wrap: wrap;
 }
 
 .navbar .logo {
@@ -25,9 +26,14 @@ body {
   color: #2dd4bf;
 }
 
+.navbar nav {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
 .navbar nav a {
   color: #c9d1d9;
-  margin-left: 20px;
   text-decoration: none;
   transition: 0.3s ease;
 }
@@ -78,4 +84,46 @@ h1 {
   border-top: 1px solid #30363d;
   background-color: #0b0f15;
   margin-top: auto;
+}
+
+/* ✅ ===== Responsive Styles for Mobile ===== */
+@media screen and (max-width: 600px) {
+  .navbar {
+    padding: 15px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar nav {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .container {
+    margin: 30px auto;
+    padding: 0 10px;
+  }
+
+  .empty-message {
+    padding: 25px;
+    font-size: 0.95rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+    padding: 15px;
+  }
 }

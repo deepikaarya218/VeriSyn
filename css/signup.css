@@ -1,28 +1,35 @@
+/* ===== Base Styles ===== */
 body {
   margin: 0;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #0f172a; /* Dark background */
+  background: #0f172a;
   font-family: Arial, sans-serif;
   color: #f1f5f9;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
+/* ===== Container ===== */
 .signup-container {
   background: #1e293b;
   padding: 30px;
   border-radius: 12px;
-  width: 350px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
 
+/* ===== Headings ===== */
 .signup-container h1 {
   text-align: center;
   margin-bottom: 20px;
   color: #38bdf8;
 }
 
+/* ===== Form Fields ===== */
 .field {
   margin-bottom: 15px;
   display: flex;
@@ -40,12 +47,14 @@ input {
   border-radius: 8px;
   background: #334155;
   color: #f1f5f9;
+  font-size: 14px;
 }
 
 input:focus {
   outline: 2px solid #38bdf8;
 }
 
+/* ===== Button ===== */
 button {
   width: 100%;
   padding: 12px;
@@ -54,31 +63,36 @@ button {
   background: linear-gradient(90deg, #6366f1, #3b82f6);
   color: white;
   font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
 button:hover {
   opacity: 0.9;
 }
 
+/* ===== Message ===== */
 #message {
   margin-top: 10px;
   font-size: 14px;
   text-align: center;
 }
 
+/* ===== Footer ===== */
 .footer {
-  margin-top: 60px;
-  padding: 30px 20px;
+  margin-top: 40px;
+  padding: 20px;
   background-color: #111827;
   text-align: center;
   border-top: 1px solid #2e2e38;
+  border-radius: 0 0 12px 12px;
 }
 
 .footer-back-button {
   display: inline-block;
   padding: 12px 24px;
-  background-color: #6366f1; /* Your orange */
+  background-color: #6366f1;
   color: white;
   font-weight: bold;
   font-size: 16px;
@@ -88,5 +102,22 @@ button:hover {
 }
 
 .footer-back-button:hover {
-  background-color: #6366f1; /* Darker orange on hover */
+  background-color: #4f46e5;
+}
+
+/* ===== Media Queries (Responsive) ===== */
+@media (max-width: 480px) {
+  .signup-container {
+    padding: 20px;
+  }
+
+  input, button {
+    font-size: 15px;
+  }
+
+  .footer-back-button {
+    width: 100%;
+    font-size: 15px;
+    padding: 12px;
+  }
 }

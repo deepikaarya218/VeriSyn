@@ -5,6 +5,7 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* ===== Navbar ===== */
@@ -15,6 +16,7 @@ body {
   align-items: center;
   padding: 16px 40px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -29,6 +31,7 @@ nav a {
   text-decoration: none;
   transition: 0.3s;
 }
+
 nav a:hover,
 nav a.active {
   color: #2dd4bf;
@@ -40,15 +43,18 @@ nav a.active {
   justify-content: space-between;
   padding: 40px;
   gap: 40px;
+  flex-wrap: wrap;
 }
 
 /* ===== Upload & Preview Sections ===== */
-.upload-section, .preview-section {
+.upload-section,
+.preview-section {
   flex: 1;
   background-color: #11161d;
   padding: 24px;
   border-radius: 16px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  min-width: 300px;
 }
 
 /* ===== Upload Box ===== */
@@ -73,13 +79,16 @@ nav a.active {
 /* ===== Buttons ===== */
 .upload-actions {
   margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 .btn {
   background-color: #2dd4bf;
   border: none;
   padding: 10px 16px;
-  margin: 8px 5px;
   border-radius: 8px;
   color: #0b0f15;
   font-weight: 600;
@@ -102,12 +111,12 @@ nav a.active {
 }
 
 .btn.danger {
-  background-color: #26b9a6;
+  background-color: #ff4d4d;
   color: #fff;
 }
 
 .btn.danger:hover {
-  background-color: #26b9a6;
+  background-color: #e03131;
 }
 
 /* ===== Style Cards ===== */
@@ -182,7 +191,7 @@ nav a.active {
   border-radius: 4px;
 }
 
-/* Footer Section */
+/* ===== Footer Section ===== */
 .footer {
   margin-top: 60px;
   padding: 30px 20px;
@@ -194,7 +203,7 @@ nav a.active {
 .footer-back-button {
   display: inline-block;
   padding: 12px 24px;
-  background-color: #26b9a6; /* Your orange */
+  background-color: #26b9a6;
   color: white;
   font-weight: bold;
   font-size: 16px;
@@ -204,6 +213,46 @@ nav a.active {
 }
 
 .footer-back-button:hover {
-  background-color: #26b9a6; /* Darker orange on hover */
+  background-color: #20a795;
 }
 
+/* ===== Media Queries ===== */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .upload-section,
+  .preview-section {
+    margin-bottom: 30px;
+    padding: 20px;
+  }
+
+  .navbar {
+    padding: 16px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  nav a {
+    margin: 6px 10px 0 0;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 480px) {
+  .style-options {
+    gap: 8px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .footer-back-button {
+    width: 100%;
+    font-size: 15px;
+  }
+}

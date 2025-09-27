@@ -14,6 +14,7 @@ body {
   align-items: center;
   padding: 15px 40px;
   background: #1a1d29;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -41,6 +42,9 @@ body {
   list-style: none;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin: 10px 0 0;
 }
 
 .nav-links a {
@@ -67,6 +71,7 @@ body {
   cursor: pointer;
   font-size: 0.9rem;
   transition: background-color 0.2s;
+  margin-top: 10px;
 }
 
 .live-scan:hover {
@@ -203,4 +208,96 @@ input[type="file"] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+/* ✅ --------------------- Media Queries --------------------- */
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 0 30px 30px;
+  }
+
+  .auth-score {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .live-scan {
+    align-self: flex-end;
+  }
+
+  h1 {
+    font-size: 22px;
+    margin: 20px 20px 5px;
+  }
+
+  .subtitle {
+    margin: 0 20px 20px;
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 20px 30px;
+  }
+
+  .upload-box {
+    padding: 30px 20px;
+  }
+
+  .circle {
+    width: 80px;
+    height: 80px;
+    border-width: 6px;
+  }
+
+  .circle::after {
+    font-size: 18px;
+    top: 35%;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button, .file-btn {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    font-size: 14px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .section-title {
+    font-size: 16px;
+  }
+
+  .metadata, .trace {
+    font-size: 13px;
+  }
+
+  .badge-btn {
+    width: 100%;
+    font-size: 14px;
+  }
 }

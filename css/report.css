@@ -14,6 +14,7 @@ body {
   align-items: center;
   padding: 15px 40px;
   background: #1a1d29;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -41,6 +42,9 @@ body {
   list-style: none;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-top: 10px;
 }
 
 .nav-links a {
@@ -98,6 +102,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5px;
+  flex-wrap: wrap;
 }
 
 .clear-btn {
@@ -126,6 +131,7 @@ table {
   border-collapse: collapse;
   color: #eee;
   font-size: 14px;
+  overflow-x: auto;
 }
 
 th, td {
@@ -150,4 +156,75 @@ tbody tr:hover {
   font-size: 12px;
   color: #888;
   padding-bottom: 20px;
+}
+
+/* ✅ --------------------- Responsive Design --------------------- */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .live-scan {
+    margin-top: 10px;
+  }
+
+  h1 {
+    font-size: 22px;
+    margin: 20px 20px 5px;
+  }
+
+  .subtitle {
+    margin: 0 20px 20px;
+    font-size: 14px;
+  }
+
+  .report-box {
+    margin: 0 20px 30px;
+    padding: 15px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 10px 6px;
+  }
+
+  .report-box h2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .clear-btn {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .footer {
+    font-size: 11px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .table-container {
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
 }
