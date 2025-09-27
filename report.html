@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Deepfake Shield - Reports</title>
+  <link rel="stylesheet" href="css/report.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+  <div class="logo">
+    <span class="lock-icon">🔒</span>
+    <span class="brand-white">Deepfake</span>
+    <span class="brand-red">Shield</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="scan.html">Scan</a></li>
+    <li><a href="report.html" class="active">Reports</a></li>
+    <li><a href="education.html" >Education</a></li>
+  </ul>
+  <button class="live-scan">● Live scan</button>
+</nav>
+
+  <h1>Reports</h1>
+  <p class="subtitle">Saved analysis results</p>
+
+  <div class="report-box">
+    <h2>
+      Recent scans
+      <button class="clear-btn" onclick="clearReports()">🗑 Clear</button>
+    </h2>
+    <p class="note">Up to 20 items are stored locally</p>
+    <table id="reportsTable">
+      <thead>
+        <tr>
+          <th>When</th>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Size</th>
+          <th>Score</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- JS will insert rows here -->
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    🔒 Your Data, Your Device — Processing happens locally.
+  </div>
+
+  <script src="js/report.js"></script>
+</body>
+</html>
