@@ -1,0 +1,206 @@
+/* --------------------- General --------------------- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0e0f1a;
+  color: white;
+  padding: 0;
+}
+
+/* --------------------- Navbar --------------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #1a1d29;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo .lock-icon {
+  font-size: 1rem;
+  margin-right: 5px;
+}
+
+.brand-white {
+  color: #fff;
+}
+
+.brand-red {
+  color: #e44;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+.nav-links a.active {
+  color: #fff;
+  font-weight: bold;
+}
+
+.live-scan {
+  background: transparent;
+  border: 1px solid #e44;
+  color: #e44;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.live-scan:hover {
+  background-color: rgba(228, 68, 68, 0.1);
+}
+
+/* --------------------- Page Layout --------------------- */
+h1 {
+  font-size: 28px;
+  margin: 20px 40px 5px;
+}
+
+.subtitle {
+  color: #ccc;
+  margin: 0 40px 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 0 40px 40px;
+}
+
+/* --------------------- Cards --------------------- */
+.card {
+  background-color: #1a1b2e;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid #2c2f44;
+}
+
+.section-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* --------------------- Upload Box --------------------- */
+.upload-box {
+  border: 2px dashed #444;
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+  transition: border-color 0.3s;
+}
+
+.upload-box:hover {
+  border-color: #ff5c5c;
+}
+
+.upload-box p {
+  margin: 10px 0;
+}
+
+.buttons {
+  margin-top: 10px;
+}
+
+button, .file-btn {
+  padding: 10px 15px;
+  background-color: #ff5c5c;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+/* --------------------- Circle Score --------------------- */
+.auth-score {
+  text-align: center;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
+  border-radius: 50%;
+  background: #1a1b2e;
+  border: 8px solid #333;
+  position: relative;
+}
+
+.circle::after {
+  content: "0%";
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ff5c5c;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* --------------------- Metadata --------------------- */
+.metadata {
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+/* --------------------- Trace --------------------- */
+.trace {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.trace p {
+  margin-bottom: 5px;
+}
+
+/* --------------------- Footer --------------------- */
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+  padding-bottom: 20px;
+}
+
+/* --------------------- Classification Buttons --------------------- */
+.badge-btn {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
