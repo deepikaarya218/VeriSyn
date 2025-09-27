@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CrypTure | Profile</title>
+  <link rel="stylesheet" href="css/profile.css" />
+</head>
+<body>
+     <header class="navbar">
+  <div class="logo"> CrypTure</div>
+  <nav>
+    <a  href="upload.html">Home</a>
+    <a href="myfile.html">My Files</a>
+    <a href="sharing.html">Sharing</a>
+    <a class="../active" href="profile.html">Profile</a>
+  </nav>
+ </header>
+ <!-- Profile Section -->
+  <main class="profile-container">
+    <h1>Profile</h1>
+    <p class="subtitle">Manage your account</p>
+
+    <div class="profile-card">
+      <h2>Account Information</h2>
+
+      <form id="profileForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your name" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="you@example.com" />
+
+        <label for="password">Change Password</label>
+        <input type="password" id="password" placeholder="New password" />
+
+        <div class="btn-group">
+          <button type="submit" class="btn save">Save</button>
+          <button type="button" class="btn logout" id="logoutBtn">Logout</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    © 2025 PixGuard. All rights reserved.
+  </footer>
+
+  <script src="js/profile.js"></script>
+</body>
+</html>
