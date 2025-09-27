@@ -1,128 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deepfake Shield</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verisyn - Protect Digital Content</title>
+  <link rel="stylesheet" href="css/landing_page.css" />
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">🔒 Deepfake <span>Shield</span></div>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="scan.html">Scan</a></li>
-      <li><a href="report.html">Reports</a></li>
-      <li><a href="education.html">Education</a></li>
-    </ul>
+  <header class="navbar">
+    <div class="logo">Verisyn</div>
+    <div class="nav-buttons">
+      <a href="login.html" class="btn-primary">Login</a>
+      <a href="signup.html" class="btn-primary">Sign Up</a>
 
-    <button class="live-scan">● Live scan</button>
-  </nav>
+    </div>
+  </header>
 
-  <!-- Main Section -->
-  <section class="container">
-    <!-- Upload Box -->
-    <div class="upload-box">
-      <h2>Deepfake Shield</h2>
-      <p>Detect deepfakes and verify media authenticity with explainable AI.</p>
-      
-      <div class="upload">
-        <p class="note">Your photo stays on device</p>
-        <div class="drop-area" id="drop-area">
-          <p>Drag & drop an image here, or use the buttons below</p>
-          <div class="buttons">
-            <input type="file" id="fileInput" hidden>
-            <button class="btn" id="chooseBtn">📁 Choose Image</button>
-            <button class="btn">📷 Camera</button>
-          </div>
-          <p id="fileName" class="file-name"></p>
-        </div>
+  <main class="main-content">
+    <h1><span>Verisyn</span> — Protect & Verify Your<br>Digital Content</h1>
+    <p>Two powerful tools — <strong>CrypTure</strong> & <strong>Deepfake Shield</strong> — for image & video authenticity, privacy and integrity.</p>
+
+
+    <div class="tool-cards">
+      <div class="card cryp">
+        <h3>CrypTure</h3>
+        <p>Encrypt, watermark, and authenticate your images with privacy-first controls.</p>
+        <a href="../crypture/upload.html" class="card-btn">Go to CrypTure →</a>
+      </div>
+      <div class="card deepfake">
+        <h3>Deepfake Shield</h3>
+        <p>Detect manipulations and verify video integrity with advanced AI checks.</p>
+        <a href="../paranox/index.html" class="card-btn">Go to Deepfake Shield →</a>
       </div>
     </div>
-
-    <!-- Sharing Box -->
-    <div class="sharing-box">
-      <h3>Smart Sharing</h3>
-      <p>Fine-grained controls</p>
-
-      <div class="control">
-        <label>⏱ Expiry timer</label>
-        <div class="timer-options" id="timerOptions">
-          <button data-time="1h">1h</button>
-          <button class="active" data-time="24h">24h</button>
-          <button data-time="7d">7d</button>
-        </div>
-      </div>
-
-      <div class="control">
-        <label><input type="checkbox" id="viewOnly" checked> 👁 View-only</label>
-      </div>
-
-      <div class="control">
-        <label><input type="checkbox" id="passwordToggle"> 🔑 Password-protected link</label>
-      </div>
-
-      <div class="link-box">
-        <input type="text" id="secureLink" value="https://crapture.ap" readonly>
-        <button class="btn copy" id="copyBtn">Copy Secure Link</button>
-      </div>
-      <p id="copyMsg" class="copy-msg"></p>
-    </div>
-  </section>
-
-    <!-- Add this section BELOW your Sharing Box inside <section class="container"> -->
+  </main>
   
-  <div class="dashboard-container">
-    <!-- Access Dashboard -->
-    <div class="access-dashboard">
-      <h3>Access Dashboard</h3>
-      <p>Who viewed your content</p>
-      <table>
-        <thead>
-          <tr>
-            <th>Viewer</th>
-            <th>When</th>
-            <th>Where</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody id="viewerTable">
-          <tr>
-            <td>Alice</td>
-            <td>2 min ago</td>
-            <td>📍 SF, USA</td>
-            <td><button class="btn revoke">Revoke</button></td>
-          </tr>
-          <tr>
-            <td>Bob</td>
-            <td>1 h ago</td>
-            <td>📍 Berlin, DE</td>
-            <td><button class="btn revoke">Revoke</button></td>
-          </tr>
-          <tr>
-            <td>You</td>
-            <td>Today 09:14</td>
-            <td>📍 NYC, USA</td>
-            <td><button class="btn revoke">Revoke</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
 
-    <!-- Leak Tracing -->
-    <div class="leak-tracing">
-      <h3>Leak Tracing</h3>
-      <p>Verify watermark ownership</p>
-      <button class="btn">Track Ownership</button>
-    </div>
-  </div>
-
-  <footer class="footer">
-  <a href="landing_page.html" class="footer-back-button"> Verisyn </a>
-</footer>
-
-
-  <script src="js/script.js"></script>
+  <script src="js/landing_page.js"></script>
 </body>
 </html>
