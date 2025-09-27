@@ -1,0 +1,258 @@
+/* Extra feedback msg */
+.file-name {
+  margin-top: 10px;
+  color: #6cf;
+  font-size: 0.9rem;
+}
+
+.copy-msg {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #6cf;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0f1117;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #1a1d29;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.logo span {
+  color: #e44;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+}
+.nav-links a.active {
+  color: #fff;
+  font-weight: bold;
+}
+
+.live-scan {
+  background: transparent;
+  border: 1px solid #e44;
+  color: #e44;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px;
+  gap: 30px;
+}
+
+/* Upload Box */
+.upload-box {
+  flex: 1;
+  background: #1a1d29;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.upload-box h2 {
+  margin-bottom: 5px;
+}
+.upload-box p {
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+.note {
+  color: #e44;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.drop-area {
+  border: 2px dashed #444;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+}
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.btn {
+  background: #e44;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #c33;
+}
+
+/* Sharing Box */
+.sharing-box {
+  flex: 0.7;
+  background: #1a1d29;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.sharing-box h3 {
+  margin-bottom: 5px;
+}
+.sharing-box p {
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+.control {
+  margin-bottom: 15px;
+}
+.timer-options {
+  display: flex;
+  gap: 10px;
+}
+.timer-options button {
+  padding: 5px 12px;
+  border: 1px solid #333;
+  background: #222;
+  color: #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.timer-options .active {
+  background: #e44;
+  color: #fff;
+}
+
+.link-box {
+  display: flex;
+  margin-top: 15px;
+}
+.link-box input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 6px 0 0 6px;
+  background: #111;
+  color: #ccc;
+}
+.link-box .copy {
+  border-radius: 0 6px 6px 0;
+}
+
+/* Dashboard container */
+.dashboard-container {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Access Dashboard */
+.access-dashboard {
+  flex: 2;
+  background: #1a1d29;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.access-dashboard h3 {
+  margin-bottom: 5px;
+}
+.access-dashboard p {
+  margin-bottom: 15px;
+  color: #aaa;
+}
+
+.access-dashboard table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.access-dashboard th, 
+.access-dashboard td {
+  padding: 12px;
+  border-bottom: 1px solid #333;
+  text-align: left;
+}
+.access-dashboard th {
+  color: #ccc;
+}
+.revoke {
+  background: #333;
+  color: #e44;
+}
+.revoke:hover {
+  background: #e44;
+  color: #fff;
+}
+
+/* Leak Tracing */
+.leak-tracing {
+  flex: 1;
+  background: #1a1d29;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.leak-tracing h3 {
+  margin-bottom: 5px;
+}
+.leak-tracing p {
+  margin-bottom: 15px;
+  color: #aaa;
+}
+
+/* Footer Section */
+.footer {
+  margin-top: 60px;
+  padding: 30px 20px;
+  background-color: #111827;
+  text-align: center;
+  border-top: 1px solid #2e2e38;
+}
+
+.footer-back-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #e44; /* Your orange */
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.footer-back-button:hover {
+  background-color: #e44; /* Darker orange on hover */
+}
