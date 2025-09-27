@@ -1,129 +1,159 @@
-/* ===== Base Styles ===== */
+/* ===== Root Colors and Fonts ===== */
+:root {
+  --bg-dark: #0b0f15;
+  --card-bg: #11161d;
+  --text-light: #e6edf3;
+  --text-muted: #8b949e;
+  --primary: #2dd4bf;
+  --primary-hover: #26b9a6;
+  --border-color: #30363d;
+  --font: 'Inter', sans-serif;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #0b0f15; /* Dark theme */
-  color: #e6edf3;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  font-family: var(--font);
+  background-color: var(--bg-dark);
+  color: var(--text-light);
 }
 
 /* ===== Navbar ===== */
 .navbar {
-  background-color: #0b0f15;
+  background-color: var(--bg-dark);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  border-bottom: 1px solid #30363d;
-  flex-wrap: wrap;
+  padding: 16px 40px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
 }
 
-.navbar .logo {
-  font-size: 1.2rem;
+.logo {
+  font-size: 20px;
   font-weight: bold;
-  color: #2dd4bf;
+  color: var(--primary);
 }
 
-.navbar nav {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.navbar nav a {
+nav a {
   color: #c9d1d9;
+  margin-left: 20px;
   text-decoration: none;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 
-.navbar nav a:hover,
-.navbar nav a.active {
-  color: #2dd4bf;
+nav a:hover,
+nav a.active {
+  color: var(--primary);
 }
 
-/* ===== Main Content Container ===== */
+/* ===== Container ===== */
 .container {
-  flex: 1;
-  max-width: 900px;
-  margin: 40px auto 0;
+  max-width: 1200px;
+  margin: 40px auto;
   padding: 0 20px;
-  text-align: center;
 }
 
-/* ===== Headings ===== */
+/* ===== Page Header ===== */
 h1 {
-  margin-bottom: 0;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
 .subtitle {
-  color: #8b949e;
-  margin-top: 5px;
-  margin-bottom: 40px;
-  font-size: 1rem;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 30px;
 }
 
-/* ===== Empty Message Box ===== */
-.empty-message {
-  background-color: #11161d;
-  color: #c9d1d9;
-  font-size: 1rem;
-  padding: 40px;
+/* ===== File Table Section ===== */
+.file-section {
+  background-color: var(--card-bg);
   border-radius: 12px;
-  display: inline-block;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 24px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  overflow-x: auto;
+}
+
+/* ===== Table Styling ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+th, td {
+  padding: 14px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  background-color: #1e222c;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #1f2430;
+}
+
+/* ===== Action Buttons ===== */
+.action-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.action-btn.view {
+  background-color: #2dd4bf;
+  color: #0b0f15;
+}
+
+.action-btn.delete {
+  background-color: transparent;
+  color: #ff5c5c;
+  border: 1px solid #ff5c5c;
+}
+
+.action-btn.view:hover {
+  background-color: #26b9a6;
+}
+
+.action-btn.delete:hover {
+  background-color: #ff5c5c22;
 }
 
 /* ===== Footer ===== */
 .footer {
+  margin-top: 60px;
+  padding: 30px 20px;
+  background-color: #111827;
   text-align: center;
-  font-size: 0.85rem;
+  border-top: 1px solid #2e2e38;
   color: #8b949e;
-  padding: 20px;
-  border-top: 1px solid #30363d;
-  background-color: #0b0f15;
-  margin-top: auto;
+  font-size: 13px;
 }
 
-/* ✅ ===== Responsive Styles for Mobile ===== */
-@media screen and (max-width: 600px) {
+/* ===== Responsive Layout ===== */
+@media (max-width: 768px) {
   .navbar {
-    padding: 15px 20px;
     flex-direction: column;
     align-items: flex-start;
+    padding: 16px 20px;
   }
 
-  .navbar .logo {
-    margin-bottom: 10px;
-  }
-
-  .navbar nav {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
+  nav a {
+    margin: 10px 10px 0 0;
   }
 
   .container {
-    margin: 30px auto;
-    padding: 0 10px;
+    padding: 0 15px;
   }
 
-  .empty-message {
-    padding: 25px;
-    font-size: 0.95rem;
-  }
-
-  .subtitle {
-    font-size: 0.95rem;
-  }
-
-  h1 {
-    font-size: 1.4rem;
-  }
-
-  .footer {
-    font-size: 0.8rem;
-    padding: 15px;
+  th, td {
+    font-size: 13px;
+    padding: 10px 8px;
   }
 }

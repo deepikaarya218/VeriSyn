@@ -1,20 +1,30 @@
-/* --------------------- General --------------------- */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #0e0f1a;
-  color: white;
-  padding: 0;
+/* ===== Root Variables ===== */
+:root {
+  --bg-color: #0e0f1a;
+  --card-bg: #1a1b2e;
+  --text-light: #e6edf3;
+  --text-muted: #9ca3af;
+  --primary: #ff5c5c;
+  --border-color: #2c2f44;
+  --font-main: 'Inter', sans-serif;
 }
 
-/* --------------------- Navbar --------------------- */
+/* ===== Base Styles ===== */
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-light);
+}
+
+/* ===== Navbar ===== */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
-  background: #1a1d29;
-  flex-wrap: wrap;
+  background-color: #1a1d29;
+  box-shadow: 0 1px 10px rgba(0,0,0,0.3);
 }
 
 .logo {
@@ -27,7 +37,6 @@ body {
 
 .logo .lock-icon {
   font-size: 1rem;
-  margin-right: 5px;
 }
 
 .brand-white {
@@ -35,16 +44,13 @@ body {
 }
 
 .brand-red {
-  color: #e44;
+  color: var(--primary);
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
-  padding-left: 0;
-  margin: 10px 0 0;
 }
 
 .nav-links a {
@@ -53,10 +59,7 @@ body {
   transition: color 0.2s;
 }
 
-.nav-links a:hover {
-  color: #fff;
-}
-
+.nav-links a:hover,
 .nav-links a.active {
   color: #fff;
   font-weight: bold;
@@ -64,31 +67,31 @@ body {
 
 .live-scan {
   background: transparent;
-  border: 1px solid #e44;
-  color: #e44;
+  border: 1px solid var(--primary);
+  color: var(--primary);
   padding: 5px 12px;
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.9rem;
   transition: background-color 0.2s;
-  margin-top: 10px;
 }
 
 .live-scan:hover {
-  background-color: rgba(228, 68, 68, 0.1);
+  background-color: rgba(255, 92, 92, 0.1);
 }
 
-/* --------------------- Page Layout --------------------- */
+/* ===== Headings ===== */
 h1 {
   font-size: 28px;
   margin: 20px 40px 5px;
 }
 
 .subtitle {
-  color: #ccc;
+  color: var(--text-muted);
   margin: 0 40px 20px;
 }
 
+/* ===== Layout Grid ===== */
 .container {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -96,31 +99,33 @@ h1 {
   padding: 0 40px 40px;
 }
 
-/* --------------------- Cards --------------------- */
+/* ===== Cards ===== */
 .card {
-  background-color: #1a1b2e;
-  border-radius: 10px;
+  background-color: var(--card-bg);
   padding: 20px;
+  border-radius: 12px;
   margin-top: 20px;
-  border: 1px solid #2c2f44;
+  border: 1px solid var(--border-color);
 }
 
 .section-title {
   font-size: 18px;
-  margin-bottom: 10px;
+  font-weight: 600;
+  margin-bottom: 12px;
 }
 
-/* --------------------- Upload Box --------------------- */
+/* ===== Upload Box ===== */
 .upload-box {
   border: 2px dashed #444;
+  border-radius: 10px;
   padding: 40px;
   text-align: center;
-  border-radius: 10px;
+  background-color: #111827;
   transition: border-color 0.3s;
 }
 
 .upload-box:hover {
-  border-color: #ff5c5c;
+  border-color: var(--primary);
 }
 
 .upload-box p {
@@ -128,25 +133,47 @@ h1 {
 }
 
 .buttons {
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
-button, .file-btn {
-  padding: 10px 15px;
-  background-color: #ff5c5c;
-  border: none;
-  border-radius: 5px;
-  color: white;
+.file-btn {
+  position: relative;
+  overflow: hidden;
   cursor: pointer;
+  background-color: var(--primary);
+  padding: 10px 15px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
   margin-right: 10px;
+}
+
+.file-btn input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: var(--primary);
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
   font-size: 14px;
 }
 
-input[type="file"] {
-  display: none;
+button:hover {
+  opacity: 0.9;
 }
 
-/* --------------------- Circle Score --------------------- */
+/* ===== Auth Score Circle ===== */
 .auth-score {
   text-align: center;
 }
@@ -156,7 +183,7 @@ input[type="file"] {
   height: 100px;
   margin: 10px auto;
   border-radius: 50%;
-  background: #1a1b2e;
+  background: var(--card-bg);
   border: 8px solid #333;
   position: relative;
 }
@@ -167,21 +194,25 @@ input[type="file"] {
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #ff5c5c;
+  color: var(--primary);
   font-weight: bold;
   font-size: 22px;
 }
 
-/* --------------------- Metadata --------------------- */
+#confidenceText {
+  color: var(--primary);
+  margin-top: 10px;
+}
+
+/* ===== Metadata ===== */
 .metadata {
   font-size: 14px;
-  color: #aaa;
+  color: var(--text-muted);
   line-height: 1.6;
 }
 
-/* --------------------- Trace --------------------- */
+/* ===== Trace Section ===== */
 .trace {
-  margin-top: 10px;
   font-size: 14px;
   color: #ddd;
 }
@@ -190,7 +221,23 @@ input[type="file"] {
   margin-bottom: 5px;
 }
 
-/* --------------------- Footer --------------------- */
+/* ===== Classification Buttons ===== */
+.badge-btn {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.badge-btn:hover {
+  background-color: #e04b4b;
+}
+
+/* ===== Footer ===== */
 .footer {
   margin-top: 40px;
   text-align: center;
@@ -199,30 +246,18 @@ input[type="file"] {
   padding-bottom: 20px;
 }
 
-/* --------------------- Classification Buttons --------------------- */
-.badge-btn {
-  margin-top: 10px;
-  padding: 8px 15px;
-  background-color: #ff5c5c;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* ✅ --------------------- Media Queries --------------------- */
-@media (max-width: 992px) {
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
   .container {
     grid-template-columns: 1fr;
-    padding: 0 30px 30px;
+    padding: 0 20px 40px;
   }
 
-  .auth-score {
-    margin-top: 20px;
+  h1, .subtitle {
+    margin-left: 20px;
+    margin-right: 20px;
   }
-}
 
-@media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -232,72 +267,10 @@ input[type="file"] {
   .nav-links {
     flex-direction: column;
     gap: 10px;
-  }
-
-  .live-scan {
-    align-self: flex-end;
-  }
-
-  h1 {
-    font-size: 22px;
-    margin: 20px 20px 5px;
-  }
-
-  .subtitle {
-    margin: 0 20px 20px;
-    font-size: 14px;
-  }
-
-  .container {
-    padding: 0 20px 30px;
+    margin-top: 10px;
   }
 
   .upload-box {
     padding: 30px 20px;
-  }
-
-  .circle {
-    width: 80px;
-    height: 80px;
-    border-width: 6px;
-  }
-
-  .circle::after {
-    font-size: 18px;
-    top: 35%;
-  }
-
-  .buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  button, .file-btn {
-    width: 100%;
-    margin-right: 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav-links {
-    font-size: 14px;
-  }
-
-  .card {
-    padding: 15px;
-  }
-
-  .section-title {
-    font-size: 16px;
-  }
-
-  .metadata, .trace {
-    font-size: 13px;
-  }
-
-  .badge-btn {
-    width: 100%;
-    font-size: 14px;
   }
 }
