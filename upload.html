@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CrypTure</title>
+  <link rel="stylesheet" href="css/upload.css">
+</head>
+<body>
+   <header class="navbar">
+  <div class="logo"> CrypTure</div>
+  <nav>
+    <a class="active" href="upload.html">Home</a>
+    <a href="myfile.html">My Files</a>
+    <a href="sharing.html">Sharing</a>
+  </nav>
+ </header>
+
+  <main class="container">
+    <section class="upload-section">
+      <h2>Upload & Choose a Style</h2>
+      <p>Your photo stays on your device until you click Generate.</p>
+
+      <div class="upload-box" id="uploadBox">
+        <p id="uploadText">Drag and drop an image here</p>
+        <input type="file" id="fileInput" accept="image/*" hidden>
+        <img id="previewImage" class="hidden" alt="Uploaded Preview">
+        <div class="upload-actions">
+          <button class="btn" id="chooseBtn">Choose Image</button>
+          <button class="btn outline" id="cameraBtn">Camera</button>
+          <button class="btn danger hidden" id="deleteBtn">Delete</button>
+        </div>
+      </div>
+
+      <h3>Pick a style</h3>
+      <div class="style-options">
+        <div class="style-card active"><div class="thumb ghibli"></div><h4>Ghibli style</h4><p>Soft colors, dreamy lighting</p></div>
+        <div class="style-card"><div class="thumb sketch"></div><h4>Pencil Sketch</h4><p>Monochrome edge sketch</p></div>
+        <div class="style-card"><div class="thumb oil"></div><h4>Oil Painting</h4><p>Rich brush strokes</p></div>
+        <div class="style-card"><div class="thumb cartoon"></div><h4>Cartoon Portrait</h4><p>Bold colors, posterize</p></div>
+        <div class="style-card"><div class="thumb vintage"></div><h4>Vintage Look</h4><p>Sepia film mood</p></div>
+      </div>
+
+      <button class="btn generate">Generate Preview</button>
+    </section>
+
+    <section class="preview-section">
+      <h2>Preview</h2>
+      <div class="preview-box" id="previewBox">No preview yet. Upload an image and click Generate.</div>
+    </section>
+  </main>
+
+  <footer class="footer">
+  <a href="landing_page.html" class="footer-back-button"> Verisyn </a>
+</footer>
+
+  <script src="js/upload.js"></script>
+</body>
+</html>
