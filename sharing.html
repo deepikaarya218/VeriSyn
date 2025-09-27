@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyrpture - Sharing</title>
+  <link rel="stylesheet" href="css/sharing.css">
+</head>
+<body>
+ <header class="navbar">
+  <div class="logo">CrypTure</div>
+  <nav>
+    <a href="upload.html">Home</a>
+    <a href="myfile.css">My Files</a>
+    <a class="active" href="sharing.html">Sharing</a>
+  </nav>
+ </header>
+ 
+
+  <main class="container">
+    <h1>Sharing</h1>
+    <p class="subtitle">Manage secure links and policies</p>
+
+    <section class="card">
+      <h2>Smart Sharing</h2>
+
+      <div class="form-group">
+        <label>Password Protection</label>
+        <div class="input-toggle">
+          <input type="password" id="password" value="•••••">
+          <label class="switch">
+            <input type="checkbox" id="passwordToggle" checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>View-Only Mode</label>
+        <label class="switch">
+          <input type="checkbox" id="viewOnlyToggle" checked>
+          <span class="slider round"></span>
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label for="expiryTimer">Expiry Timer: <span id="expiryValue">42</span>h</label>
+        <input type="range" id="expiryTimer" min="1" max="72" value="42">
+      </div>
+
+      <div class="form-group">
+        <label>Generated Secure Link</label>
+        <div class="input-copy">
+          <input type="text" id="secureLink" value="Click Get Secure Link in the preview" readonly>
+          <button id="copyBtn">Copy</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Recipients</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Recipient</th>
+            <th>Email</th>
+            <th>Date & Time</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/sharing.css"></script>
+</body>
+</html>
