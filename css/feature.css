@@ -1,0 +1,87 @@
+/* ---------- Global Page Styling ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: radial-gradient(circle at top, #0a1b2b, #020710);
+    color: #d7e9ff;
+    overflow-x: hidden;
+}
+
+/* ---------- Top Navigation (Home Button) ---------- */
+.top-nav {
+    position: absolute;
+    top: 22px;
+    right: 35px;
+}
+
+.top-nav a {
+    color: #c9d6e3;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.top-nav a:hover {
+    color: #29a8ff; /* neon hover */
+}
+
+/* ---------- Wrapper ---------- */
+.features-wrapper {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/* ---------- Heading / Subheading ---------- */
+.features-wrapper h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #00c6ff;      /* Forgot password SAME color */
+    margin-bottom: 10px;
+}
+
+.features-wrapper p {
+    font-size: 16px;
+    color: #b4c3d4;      /* Same subheading color */
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+/* ---------- Features Grid ---------- */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ---------- Feature Card ---------- */
+.feature-card {
+    padding: 25px;
+    background: rgba(10, 20, 35, 0.4);
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    transition: 0.35s ease;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    color: #7cd6ff;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #b4c3d4;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ---------- Hover Effects ---------- */
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.35);
+    background: rgba(10, 20, 35, 0.55);
+}
