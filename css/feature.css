@@ -85,3 +85,104 @@ body {
     box-shadow: 0 0 30px rgba(0, 255, 255, 0.35);
     background: rgba(10, 20, 35, 0.55);
 }
+/* ===========================
+      RESPONSIVE MEDIA QUERIES
+   =========================== */
+
+/* ---------- Large Tablets (max 1024px) ---------- */
+@media (max-width: 1024px) {
+    .features-wrapper h1 {
+        font-size: 36px;
+    }
+
+    .features-wrapper p {
+        font-size: 15px;
+    }
+
+    .feature-card {
+        padding: 22px;
+    }
+}
+
+/* ---------- Tablets / Landscape Mobiles (max 768px) ---------- */
+@media (max-width: 768px) {
+    .top-nav {
+        top: 18px;
+        right: 20px;
+    }
+
+    .top-nav a {
+        font-size: 15px;
+    }
+
+    .features-wrapper {
+        padding: 60px 15px;
+    }
+
+    .features-wrapper h1 {
+        font-size: 32px;
+    }
+
+    .features-wrapper p {
+        font-size: 14px;
+        max-width: 550px;
+    }
+
+    .features-grid {
+        gap: 25px;
+    }
+
+    .feature-card {
+        padding: 20px;
+    }
+}
+
+/* ---------- Mobile (max 576px) ---------- */
+@media (max-width: 576px) {
+    .top-nav {
+        top: 15px;
+        right: 15px;
+    }
+
+    .top-nav a {
+        font-size: 14px;
+    }
+
+    .features-wrapper h1 {
+        font-size: 28px;
+    }
+
+    .features-wrapper p {
+        font-size: 13px;
+        margin-bottom: 30px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .feature-card {
+        padding: 18px;
+        border-radius: 16px;
+    }
+}
+
+/* ---------- Small Phones (max 400px) ---------- */
+@media (max-width: 400px) {
+    .top-nav a {
+        font-size: 13px;
+    }
+
+    .features-wrapper h1 {
+        font-size: 24px;
+    }
+
+    .feature-card h3 {
+        font-size: 18px;
+    }
+
+    .feature-card p {
+        font-size: 13px;
+    }
+}
