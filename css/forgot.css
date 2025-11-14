@@ -10,6 +10,39 @@ body {
     color: white;
 }
 
+/* NAVBAR */
+/* .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 50px;
+    background-color: #0b1220;
+    border-bottom: 1px solid #1b2436;
+    align-items: center;
+} */
+
+/* NAVBAR */
+
+/* ---------- Top Navigation (Home Button) ---------- */
+.top-nav {
+    position: absolute;
+    top: 22px;
+    right: 35px;
+}
+
+.top-nav a {
+    color: #5a9ee2;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.top-nav a:hover {
+    color: #0764a1; /* neon hover */
+}
+
+
+
 .container {
     width: 100%;
     height: 100vh;
